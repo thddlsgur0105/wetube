@@ -1,4 +1,3 @@
-import { videos as videoList } from "../db";
 import routes from "../routes";
 
 export const home = (req, res) => {
@@ -16,6 +15,7 @@ export const postUpload = (req, res) => {
         body : { file, title, description }
     } = req;
     // To Do : Upload and save Video
+    // middlewares.js 에서 routes를 global 변수로 설정했는데 왜 또 다시 import 해야 하지??
     res.redirect(routes.videoDetail(324393));
 };
 
