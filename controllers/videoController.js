@@ -4,6 +4,7 @@ import Video from "../models/Video";
 export const home = async(req, res) => {
     try {
         const videos = await Video.find({});
+        console.log(videos);
         res.render("home", { pageTitle: "Home", videos });
     } catch(error) {
         console.log(error);
@@ -17,13 +18,20 @@ export const search = (req, res) => {
 export const videos = (req, res) => res.render("videos", { pageTitle: "Videos" });
 
 export const getUpload = (req, res) => res.render("upload", { pageTitle: "Upload" });
-export const postUpload = (req, res) => {
+export const postUpload = async(req, res) => {
     const {
-        body : { file, title, description }
+        body : {title, description},
+        file : {path}
     } = req;
+    const newVideo = await Video.create({
+        fileUrl: path,
+        title,
+        description
+    });
+    console.log(newVideo);
     // To Do : Upload and save Video
     // middlewares.js 에서 routes를 global 변수로 설정했는데 왜 또 다시 import 해야 하지??
-    res.redirect(routes.videoDetail(324393));
+    res.redirect(routes.videoDetail(newVideo.id));
 };
 
 export const videoDetail = (req, res) => res.render("videoDetail", { pageTitle: "Video Detail" });
