@@ -7,18 +7,31 @@
         width: 100%;
         max-width: 320px;
         margin-bottom: 50px;
-        input {
+        input:not([type="file"]),
+        .fileUpload {
             width: 100%;
-            padding: 10px;
             display: block;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
             &:not(:last-child) {
                 margin-bottom: 25px;
             }
+            label {
+                font-weight: 400;
+                margin-right: 5px;
+            }
+        }
+        textarea {
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
         }
         input[type="submit"] {
             background-color: #0984e3;
             color: #fff;
         }
     }
+    a {
+        width: 100%;
+        max-width: 320px;
+    }
+
 }
