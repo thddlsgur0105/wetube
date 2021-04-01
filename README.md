@@ -15,3 +15,6 @@ Cloning Youtube with Vanilla and NodeJS
 - [x] Upload
 - [x] Edit Video
 - [ ] Video Detail
+
+### 공부 진행상황
+- 공부 시작 부분: #8.0 6분 부터 
