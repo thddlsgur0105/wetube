@@ -147,6 +147,9 @@ a button,
 input[type="submit"] {
   cursor: pointer; }
 
+.video__info a {
+  color: #444444; }
+
 .u-avatar {
   height: 80px;
   background-color: #ea232c;
