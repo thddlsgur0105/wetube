@@ -1,6 +1,7 @@
 import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
+import { AsyncDependenciesBlock } from "webpack";
 
 export const getJoin = (req, res) => {
     res.render("join", { pageTitle: "Join" })
@@ -113,5 +114,22 @@ export const userDetail = async (req, res) => {
         res.redirect(routes.home);
     }
 };
-export const geteditProfile = (req, res) => res.render("editProfile", { pageTitle: "Edit Profile" });
+export const getEditProfile = (req, res) => res.render("editProfile", { pageTitle: "Edit Profile" });
+export const postEditProfile = async (req, res) => {
+    const { 
+        body: { name, email },
+        file
+    } = req;
+    
+    try {
+        await User.findByIdAndUpdate(req.user.id, {
+            email,
+            name,
+            avatarUrl: file ? file.path : req.user.avatarUrl
+        });
+        res.redirect(routes.me);
+    } catch(error) {
+        res.render("editProfile", { pageTitle: "Edit Profile" });
+    }
+};
 export const changePassword = (req, res) => res.render("changePassword", { pageTitle: "Change Password" });
