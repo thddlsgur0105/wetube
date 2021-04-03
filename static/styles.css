@@ -354,6 +354,8 @@ button.delete {
       font-size: 12px; }
     .video-detail__container .video__info .video__description {
       font-size: 16px; }
+    .video-detail__container .video__info .video__author a {
+      color: #ff6b6b; }
   .video-detail__container .video__comments {
     margin-top: 25px; }
     .video-detail__container .video__comments .video__comment-number {
