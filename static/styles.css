@@ -412,3 +412,5 @@ button.delete {
     align-items: center; }
     .user-profile .user-profile__btns a {
       margin-top: 15px; }
+    .user-profile .user-profile__btns a:last-child {
+      margin-bottom: 15px; }
