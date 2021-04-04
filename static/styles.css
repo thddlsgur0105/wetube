@@ -333,7 +333,7 @@ button.delete {
     font-size: 16px;
     position: absolute;
     z-index: 9;
-    bottom: 20px;
+    bottom: 0px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
