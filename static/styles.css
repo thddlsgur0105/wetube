@@ -324,13 +324,13 @@ button.delete {
   .videoPlayer:hover .videoPlayer__controls {
     opacity: 1; }
   .videoPlayer video {
-    width: 500px;
+    width: 100%;
     max-width: 100%; }
   .videoPlayer .videoPlayer__controls {
     opacity: 0;
     transition: opacity 0.4s linear;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     position: absolute;
     z-index: 9;
     bottom: 0px;
