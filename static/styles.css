@@ -320,6 +320,7 @@ button.delete {
   margin-bottom: 10px; }
 
 .videoPlayer {
+  width: 500px;
   position: relative; }
   .videoPlayer:hover .videoPlayer__controls {
     opacity: 1; }
