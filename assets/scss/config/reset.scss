@@ -157,3 +157,25 @@ input[type="submit"] {
 .video__info a {
   color: $black;
 }
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 70px;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
