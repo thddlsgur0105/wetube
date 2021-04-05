@@ -4,11 +4,7 @@ include mixins/videoBlock
 block content 
     .user-profile 
         .user-profile__header 
-            if user.avatarUrl.includes("https://")
-                img.u-avatar(src=user.avatarUrl, alt="user-avatar")
-            else 
-                img.u-avatar(src=`/${user.avatarUrl}`, alt="user-avatar")
-            h4.profile__username #{user.name} 
+                img.u-avatar(src=user.avatarUrl, alt="user-avatar") 
         if loggedUser && user.id === loggedUser.id
             .user-profile__btns 
                 a(href=`/users${routes.editProfile}`)
