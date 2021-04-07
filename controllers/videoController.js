@@ -100,7 +100,7 @@ export const deleteVideo = async (req, res) => {
 };
 
 export const postRegisterView = async (req, res) => {
-    const { params: id } = req;
+    const { params: { id } } = req;
     try {
         const video = await Video.findById(id);
         video.views += 1;
