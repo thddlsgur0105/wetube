@@ -15,3 +15,8 @@ Cloning Youtube with Vanilla and NodeJS
 - [x] Upload
 - [x] Edit Video
 - [ ] Video Detail
+
+### 고민
+
+- 과정들을 조금 더 섬세하게 들여다 봐야 할 필요가 있음
+- [ ] Code Challenge -- Delete 
